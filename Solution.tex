@@ -1,0 +1,62 @@
+% Speed Racer
+%
+% Vinh Nguyen
+% October 17, 2018
+
+\documentclass[12pt, oneside, a4paper]{article}
+
+\usepackage{mathtools}
+
+\begin{document}
+
+\title{Speed Racer}
+\author{Vinh Nguyen}
+\date{October 17, 2018}
+\maketitle
+\newpage
+
+\section*{Description}
+	\paragraph{
+		There is a speed racer who must rescue their friend at the top of Mount Domo,
+		which is \emph{m} km away, as quickly as possible.  For a given speed 
+		\emph{v} in km/hr, the amount of fuel \emph{t} consumed in L/hr is: 
+		$$a*v^4 + b*v^3 + c*v^2 + d*v = t$$
+	}
+	\paragraph{
+		What is the maximum speed, speed racer can drive to reach the top of Mount
+		Domo without running out of gas?
+	}
+	
+\section*{Solution}
+	\paragraph{
+		From the equation, $a*v^4 + b*v^3 + c*v^2 + d*v = t$, solving for \emph{v}
+		will yield the maximum speed possible given \emph{t} fuel, which is the
+		solution if $t <= m$.
+		\hspace{0pt}
+		\emph{m} is the factor which will determine maximum speed.  If we take the
+		equation and factor in \emph{m}, following correct unit conventions we should
+		arrive at our answer.
+		$$L/hr = L/km * km/hr$$
+		We simply solve: $$a*v^4 + b*v^3 + c*v^2 + d*v = t/m * v$$
+		for \emph{v}.
+	}
+
+\section*{Input}
+	\paragraph{
+		An input file containing a problem per line.\hspace{0pt}
+		Each line containing 6 single-space separated positive floating point values:
+		a b c d m t
+		No input value will exceed 1000.  
+		There will always be a solution.
+		Truncate, rather than round, the final result.
+	}	
+
+\section*{Output}
+	\paragraph{
+		A single floating point value representing the maximum speed, speed racer can
+		travel to reach the top of Mount Domo without running out of fuel, formatted
+		as a decimal with exactly two digits right of the decimal point and no leading
+		zeros.
+	}
+	
+\end{document}
